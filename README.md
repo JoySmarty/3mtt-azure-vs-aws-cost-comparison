@@ -1,7 +1,6 @@
 # 3mtt-azure-vs-aws-cost-comparison
 Azure and AWS cost comparison
 
-
 # ☁️ AWS vs Azure Cost Comparison Project
 
 ## 📌 Overview
@@ -35,6 +34,39 @@ Both cloud environments were built using equivalent resources:
 | AWS | $19.15 |
 | Azure (Linux) | $12.07 |
 | Azure (Windows + AHB) | $12.07 |
+
+---
+
+# 🌍 Regional Cost Analysis (NEW - RUBRIC REQUIREMENT)
+
+This project includes a multi-region cost comparison across:
+
+- 🇺🇸 US East (baseline)
+- 🇪🇺 Europe (West Europe / Ireland)
+- 🌏 Asia (East Asia / Tokyo)
+
+👉 Full breakdown available here:
+- [`regional-cost-comparison.md`](docs/regional-cost-comparison.md)
+
+Key findings:
+- AWS pricing increases significantly in Asia due to compute + data transfer costs
+- Azure remains more stable across regions
+- Storage cost variation is minimal compared to compute costs
+
+---
+
+# 📊 Spreadsheet-Style Cost Comparison (RUBRIC REQUIREMENT)
+
+A structured service-by-service comparison table was created to satisfy rubric requirements.
+
+It includes:
+- AWS vs Azure side-by-side cost breakdown
+- Monthly and annual totals
+- Percentage difference per service
+- Regional comparison analysis
+
+👉 Detailed report:
+- [`cost-comparison-report.md`](docs/cost-comparison-report.md)
 
 ---
 
@@ -72,7 +104,7 @@ All estimates were created using official AWS and Azure pricing calculators.
 - AWS pricing is heavily influenced by data transfer (network egress).
 - Azure provides lower overall cost for small workloads.
 - Compute pricing is similar at entry-level instance sizes.
-- Storage is more cost-efficient on Azure for this configuration.
+- Storage is more cost-efficient on AWS for this configuration.
 - Azure Windows cost remains the same as Linux due to Azure Hybrid Benefit.
 
 ---
@@ -109,6 +141,7 @@ azure-vs-aws-cost-comparison/
 │   ├── aws-estimate-summary.md
 │   ├── azure-estimate-summary.md
 │   ├── cost-comparison-report.md
+│   ├── regional-cost-comparison.md
 │   ├── justification-summary.md
 │
 ├── screenshots/
@@ -122,11 +155,17 @@ azure-vs-aws-cost-comparison/
 
 Screenshots of all pricing calculator configurations are included in the `/screenshots` folder for verification.
 
+All estimates are supported with official pricing calculator links listed above.
+
 ---
 
 # 🧠 Conclusion
 
-This project demonstrates that cloud pricing varies significantly based on provider structure and usage patterns. AWS offers detailed granular pricing but becomes more expensive due to data transfer costs. Azure provides a more cost-efficient structure for small-scale applications.
+This project demonstrates that cloud pricing varies significantly based on provider, region, and workload design.
 
-Both platforms are suitable for production workloads, but cost efficiency depends on workload design and architecture decisions.
+- AWS is more sensitive to regional pricing and data transfer costs.
+- Azure is more consistent across regions and more cost-efficient for small workloads.
+- Storage costs are relatively stable compared to compute and networking.
+
+Both platforms are suitable for production workloads, but cost efficiency depends heavily on architecture decisions and region selection.
 ```
